@@ -47,8 +47,9 @@ This is the core of the NFT as that's where all the data is going to be.
 * Each mint will have a new JSON, since the idea is to mint a new NFT everytime I update my CV. As you'll see in the contract below, the/an IPFS CID needs to be given to the contract for each mint.
 * All you need to create a JSON file is a text editor. Just make sure it's formatted correctly. You can easily do so here: https://jsonlint.com/. 
 * It's not super easy to understand how OpenSea is going to interpret that data so it took me a couple of tries before I was happy with it. Those tries were done on Goerli since that's the testnet which OpenSea supports, more on that later. 
+* Put the JSON file on IPFS too, and pin it.
 
-*You now have a JSON File that describes your collection & links to an image of your CV on IPFS & everything else which you felt interesting to add. Time to actually mint it.*
+*You now have a JSON File on ipfs that describes your collection & links to an image of your CV on IPFS & everything else which you felt interesting to add. Time to actually mint it.*
 
 #### 5. You're going to need to write the smart contract 
 it's what will mint your CV as an ERC721. The contract I have cobbled together is in the repo as "erc721cv.sol". It's not rocket science, it's not very long, and extensively uses the OpenZeppelin libraries to make it (1) very standard (2) very easy.

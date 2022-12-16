@@ -51,7 +51,7 @@ This is the core of the NFT as that's where all the data is going to be.
 *You now have a JSON File that describes your collection & links to an image of your CV on IPFS & everything else which you felt interesting to add. Time to actually mint it.*
 
 #### 5. You're going to need to write the smart contract 
-it's what will mint your CV as an ERC721. The contract I have cobbled together is in the repo as "hardymathieuresume.sol". It's not rocket science, it's not very long, and extensively uses the OpenZeppelin libraries to make it (1) very standard (2) very easy.
+it's what will mint your CV as an ERC721. The contract I have cobbled together is in the repo as "erc721cv.sol". It's not rocket science, it's not very long, and extensively uses the OpenZeppelin libraries to make it (1) very standard (2) very easy.
 
 #### 6. That contract then needs to be put on chain. 
 The easiest way I have found to do this is by using the [Remix online IDE](https://remix.ethereum.org/). It's not something that's advertised by professionals who would prefer to use HardHat, but for the hobbyist who isn't looking to install a whole bunch of new software and sign up for accounts with Alchemy et al., I find it's super convenient. And the contract is so small and standard, I didn't feel like running a whole bunch of automated tests on it (although that's good practice). 

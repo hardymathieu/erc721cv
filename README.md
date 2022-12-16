@@ -30,12 +30,27 @@ Elements of this are:
 * Remix IDE
 
 ### Steps to getting there
+
 1. Create your CV / Resume. 
 2. Turn it into a PNG. I did my CV in Google Docs so I just used [Awesome Screenshot](https://chrome.google.com/webstore/detail/awesome-screenshot-and-sc/nlipoenfbbikpbjkfpfillcgkoblgpmj) to do a "full page" screenshot.
 3. Upload that PNG to IPFS. 
 * https://docs.ipfs.tech/basics/desktop-app/#share-files . That's the "dumb and easy" way. I highly recommend it.
 * make sure you "pin" the file so that it stays on your node.
-* For the purpouses of this little experiment, it's sufficient. If you want to be really sure that the content on IPFS is always available, it might be better to run it from an always-on server you own, because there is no guarantee that IPFS nodes will keep hosting your image & Json forever. I've setup an Ubuntu Server on a Raspberry-Pi 4 and setup an IPFS node there and pinned the same files (using CID) to it. It works ok, eventhough IPFS CLI is a little confusing to me.
+* For the purpouses of this little experiment, it's sufficient. If you want to be really sure that the content on IPFS is always available, it might be better to run it from an always-on server you own, because there is no guarantee that IPFS nodes will keep hosting your image & Json forever and you probably don't keep your pc on at all times. I've setup an Ubuntu Server on a Raspberry-Pi 4 and setup an IPFS node there and pinned the same files (using CID) to it. It works ok, eventhough IPFS CLI is a little confusing to me.
+* Alternatively, you can pay a little to Arweave so that your content is hosted forever. I didn't feel it very necessary for my CV data to be *that* permanent. But it's nice to know it exists.
+
+4. Create your JSON file. This is the core of the NFT as that's where all the data is going to be. 
+* I could have put the data in the NFT directly, but then transaction/minting fees on ETH get ridiculous. Because of this no one does it, and I couldn't easily find tutorials to set it up. So, between little information & high gas fees, I chose the easy way: JSON on IPFS.
+* the JSON for the first CV mint is here: https://ipfs.io/ipfs/QmaHgJuTvNevmkDYosQ5iDLoiPNzpVuPJ1zAovcmuEtsDQ
+* Each mint will have a new JSON, since the idea is to mint a new NFT everytime I update my CV. As you'll see in the contract below, the/an IPFS CID needs to be given to the contract for each mint.
+* All you need to create a JSON file is a text editor. Just make sure it's formatted correctly. You can easily do so here: https://jsonlint.com/. 
+* It's not super easy to understand how OpenSea is going to interpret that data so it took me a couple of tries before I was happy with it. Those tries were done on Goerli since that's the testnet which OpenSea supports, more on that later. 
+
+*You now have a JSON File that describes your collection & links to an image of your CV on IPFS & everything else which you felt interesting to add. Time to actually mint it.*
+
+5. You're going to need to write the smart contract that will mint your CV as an ERC721. The contract I have cobbled together is in the repo as "hardymathieuresume.sol". It's not rocket science, it's not very long, and extensively uses the OpenZeppelin libraries to make it (1) very standard (2) very easy.
+
+6. That contract then needs to be put on chain. The easiest way I have found to do this is by using the (Remix online IDE)[https://remix.ethereum.org/]. It's not something that's advertised by professionals who would prefer to use HardHat, but for the hobbyist who isn't looking to install a whole bunch of new software and sign up for accounts with Alchemy et al., I find it's super convenient. And the contract is so small and standard, I didn't feel like running a whole bunch of automated tests on it (although that's good practice). 
 
 
 ## Resources I read for putting this all together

@@ -58,13 +58,15 @@ it's what will mint your CV as an ERC721. The contract I have cobbled together i
 The easiest way I have found to do this is by using the [Remix online IDE](https://remix.ethereum.org/). It's not something that's advertised by professionals who would prefer to use HardHat, but for the hobbyist who isn't looking to install a whole bunch of new software and sign up for accounts with Alchemy et al., I find it's super convenient. And the contract is so small and standard, I didn't feel like running a whole bunch of automated tests on it (although that's good practice). 
 It's also super easy to test your contract in Remix as you can deploy it on a "local" blockchain without needing to setup anything at all, and then deploy it on testnets with very little setup, and finally on mainnet with the same very little setup.
 
-[This is roughly what I followed for using Remix.](https://levelup.gitconnected.com/create-nfts-with-openzeppelin-erc721-smart-contract-d4a64324ad47) [and a little of this too](https://luckytrader.com/articles/simple-erc721)
+[This is roughly what I followed for using Remix.](https://levelup.gitconnected.com/create-nfts-with-openzeppelin-erc721-smart-contract-d4a64324ad47) ++ [and a little of this too](https://luckytrader.com/articles/simple-erc721)
 
 The difference with the above is that, in order to get comfortable and understand what's going on, when "deploying and running transactions" I didn't use "Injected Provider" the first time. I used the "Remix VM". That's a virtual machine that's like Ethereum but temporarily running in your browser. Feel free to deploy there 20 times just to get a feel for it. It doesn't even require Metamask.
 
-I then moved on to using Metamask connected to Goerli so I coudl see what my NFT looked like on the testnet used by OpenSea. I had to mint it 4 times to actually get it right. The minting always went well but the JSON needed tweaking -- https://testnets.opensea.io/collection/hardymathieuresume
+I then moved on to using Metamask connected to Goerli so I could see what my NFT looked like on the testnet used by OpenSea. I had to mint it 4 times to actually get it right. The minting mostly always went well but the JSON needed tweaking -- https://testnets.opensea.io/collection/hardymathieuresume
 
-What you need to give the function to mint the NFT correctly is "address of the wallet that deployed the contract, IPFS CID".
+What you need to give the function to mint the NFT correctly is 
+"address of the wallet that deployed the contract, IPFS CID".
+
 So, for example: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, QmaHgJuTvNevmkDYosQ5iDLoiPNzpVuPJ1zAovcmuEtsDQ
 
 Here it is actually visible in Remix. Once you have put that in the filed, just hit the orange button "MintMyNewHLCV" on the left, that will mint.

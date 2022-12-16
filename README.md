@@ -16,7 +16,7 @@ It's here: https://ipfs.io/ipfs/QmaHgJuTvNevmkDYosQ5iDLoiPNzpVuPJ1zAovcmuEtsDQ
 
 ## Why?
 Mostly to learn, and because it's fun, and because it's timely.
-I had been meaning to get better acquainted with git, github, IPFS, and solidity. And this seemed to be like the ideal little project to do it all at once.
+I had been meaning to get better acquainted with git, github, IPFS, and solidity. And this seemed to be like the ideal little project to do it all at once. I'm doing it in public so others can learn too & because it's easier that trying to get some certification from somewhere :) .
 
 But I really can't quite think of any good & practical reasons to actually turn your CV into an NFT.
 

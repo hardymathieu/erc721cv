@@ -55,7 +55,8 @@ it's what will mint your CV as an ERC721. The contract I have cobbled together i
 
 #### 6. That contract then needs to be put on chain. 
 The easiest way I have found to do this is by using the [Remix online IDE](https://remix.ethereum.org/). It's not something that's advertised by professionals who would prefer to use HardHat, but for the hobbyist who isn't looking to install a whole bunch of new software and sign up for accounts with Alchemy et al., I find it's super convenient. And the contract is so small and standard, I didn't feel like running a whole bunch of automated tests on it (although that's good practice). 
-
+It's also super easy to test your contract in Remix as you can deploy it on a "local" blockchain without needing to setup anything at all, and then deploy it on testnets with very little setup, and finally on mainnet with the same very little setup.
+[This is roughly what I followed for using Remix](https://levelup.gitconnected.com/create-nfts-with-openzeppelin-erc721-smart-contract-d4a64324ad47)
 
 ## Resources I read for putting this all together
 

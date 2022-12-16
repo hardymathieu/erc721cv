@@ -65,6 +65,7 @@ I then moved on to using Metamask connected to Goerli so I coudl see what my NFT
 
 What you need to give the function to mint the NFT correctly is "address of the wallet that deployed the contract, IPFS CID".
 So, for example: 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, QmaHgJuTvNevmkDYosQ5iDLoiPNzpVuPJ1zAovcmuEtsDQ
+
 Here it is actually visible in Remix. Once you have put that in the filed, just hit the orange button "MintMyNewHLCV" on the left, that will mint.
 ![image](https://user-images.githubusercontent.com/1762858/208080314-28246650-931f-4dc8-9181-37e3902a1034.png)
 
